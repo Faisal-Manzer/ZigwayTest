@@ -1,0 +1,12 @@
+.idea
+.vscode
+env
+**/.DS_Store
+venv
+**/__pycache__/
+mysql.sock
+temp
+media
+secrets.json
+**/migrations/**
+*.icloud
