@@ -13,10 +13,10 @@ axios.defaults.baseURL = BASE_URL;
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-urlencoded';
 
 
-const GET_TOKEN_PAIR = '/auth/sign-in/';
+const GET_TOKEN_PAIR = '/auth/token/';
 const CREATE_ACCOUNT = '/auth/sign-up/';
 const USERNAME_AVAILABLE = '/auth/username/available/';
-const REFRESH_ACCESS_TOKEN = '/auth/refresh/';
+const REFRESH_ACCESS_TOKEN = '/auth/token/refresh/';
 const USER_DETAILS = "/user/meta/";
 
 
