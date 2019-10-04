@@ -13,7 +13,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenViewBase
 from rest_framework_simplejwt.settings import api_settings
 
-from .serializers import UserSerializer
+from .serializers import UserSerializer, SignInViewSerializer
 
 from auth.helpers import (
     OpenApi, open_api,
@@ -37,7 +37,7 @@ class SignInView(OpenApi):
         password
     """
     user = None
-    serializer_class = SignINViewSerializer
+    serializer_class = SignInViewSerializer
 
     def post(self, request, username=None, password=None):
 

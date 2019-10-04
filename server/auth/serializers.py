@@ -1,11 +1,11 @@
 # core/auth/serializers.py > Faisal
-__all__ = ['SignINViewSerializer', 'UserSerializer']
+__all__ = ['SignInViewSerializer', 'UserSerializer']
 
 from rest_framework import serializers as se
 from django.contrib.auth import get_user_model
 
 
-class SignINViewSerializer(se.Serializer):
+class SignInViewSerializer(se.Serializer):
     username = se.CharField(required=True)
     password = se.CharField(required=True)
 
@@ -22,9 +22,6 @@ class UserSerializer(se.ModelSerializer):
             username=validated_data['username'],
             email=validated_data['email'],
             first_name=validated_data['first_name'],
+            password=validated_data['password']
         )
-
-        user.set_password(validated_data['password'])
-        user.save()
-
         return user
